@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Underline Menu </title>
+
+    <style>
+        body{
+            background-color: #282C34;
+            font-family:  Tahoma;
+        }
+
+        nav{
+            width: 380px;
+            height: 40px;     
+            margin: 200px auto;                        
+            position: relative;           
+            font-size: 0; /* IMP clear the space between inline-block items*/
+            box-shadow: 0 0 10px dodgerblue;
+        }        
+
+        .item{                       
+            width: 25%;
+            height: 40px;
+            line-height: 40px;
+            display: inline-block;
+            background-color: rgb(30, 143, 255);
+            text-align: center;
+            position: relative;            
+        }
+
+        .item a{
+            text-decoration: none;
+            color: white;
+            display: block;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .item a::after {
+            content: "";
+            display: block;
+            width: 0%;
+            height: 3px;
+            background-color: lightblue;
+            margin: auto;
+            translate: 0 -3px;
+            transition: all 300ms linear;
+        }
+
+        .item:hover a::after{
+            width: 100%;
+        }
+
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="item"> 
+            <a href=""> FrontEnd </a>            
+        </div>
+        
+        <div class="item"> 
+            <a href=""> Html </a>             
+        </div>
+
+        <div class="item"> 
+            <a href=""> Css </a>             
+        </div>
+
+        <div class="item"> 
+            <a href=""> Java </a>             
+        </div>
+
+        <img src="Menubars.PNG" style=" margin: 50px 0;" alt="">
+    </nav>
+</body>
+</html>
